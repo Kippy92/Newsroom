@@ -1,0 +1,33 @@
+<nav class="navbar" style="text-align: center;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <h1>
+            {{ title }}
+          </h1>
+    </div>
+    <div class="navbar">
+      <a class="navbar-brand" href="{{news[0].url}}"><button class="btn btn-danger">#1 Headline: {{news[0].title}}</button></a>
+      <a class="navbar-brand" [routerLink]="['/']"><button class="btn btn-primary">Top Stories</button></a>
+      <a class="navbar-brand" [routerLink]="['/search']"><button class="btn btn-primary">Search Stories</button></a>
+    </div>
+  </div>
+</nav>
+<nav class="navbar" style="text-align: center;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+        <h1>
+            Categories
+          </h1>
+    </div>
+    <div class="navbar">
+      <a class="navbar-brand" [routerLink]="['/business']"><button class="btn btn-primary">Business</button></a>
+      <a class="navbar-brand" [routerLink]="['/entertainment']"><button class="btn btn-primary">Entertainment</button></a>
+      <a class="navbar-brand" [routerLink]="['/health']"><button class="btn btn-primary">Health</button></a>
+      <a class="navbar-brand" [routerLink]="['/science']"><button class="btn btn-primary">Science</button></a>
+      <a class="navbar-brand" [routerLink]="['/sports']"><button class="btn btn-primary">Sports</button></a>
+      <a class="navbar-brand" [routerLink]="['/technology']"><button class="btn btn-primary">Technology</button></a>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

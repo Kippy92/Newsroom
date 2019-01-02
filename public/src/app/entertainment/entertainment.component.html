@@ -1,0 +1,9 @@
+<div class='container-fluid' style='text-align: center'><h1>Top Entertainment Stories</h1></div>
+<div *ngFor="let x of news" style='text-align: center'>
+  <h2> <a href = '{{ x.url }}'>{{ x.title }}</a></h2>
+  <h3 *ngIf='x.author'>By: {{ x.author }}</h3>
+  <h4> {{ x.description }}</h4>
+  <h4> <img src = '{{x.urlToImage}}' style='height: 350px; width: 500px'></h4>
+  <h5>Source: {{ x.source.name }}</h5>
+  
+</div>
